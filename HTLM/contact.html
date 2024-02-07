@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" >
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kontaktinformation</h1>
+      <div>
+        <h2>Meny</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="main.html"><strong>Huvudsida</strong></a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="active">Kontakt</a>
+            </li>
+
+            <li>
+              <a href="series.html"><strong>Serier</strong></a>
+            </li>
+
+            <li>
+              <a href="forms.html"><strong>Formulär</strong></a>
+            </li>
+
+            <li>
+                <a href="buttons.html"><strong>Knappar</strong></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article>
+        <h2>Kontakta oss</h2>
+        <a href="tel:+727447336">Ring oss</a>
+        <a href="mailto:robin.klasson@outlook.com"> Maila oss</a>
+      </article>
+
+      <br>
+
+      <form>
+        <fieldset>
+          <legend>Kontaktformulär</legend>
+          <input type="text" name="name" placeholder="Namn">
+          <input type="email" name="email" placeholder="Email" >
+          <input type="tel" name="phone" placeholder="Phonenumber">
+          <br>
+          <h3>Är du kund hos oss?</h3>
+
+          <p>Är du kund hos oss?</p>
+
+          <input type="radio" name="kund?" id="ja" value="ja">
+          <label for="ja">Ja, jag är kund,</label>
+          <br>
+          <input type="radio" name="kund?" id="nej" value="nej">
+          <label for="nej">Nej, jag är inte kund.</label>
+          <br>
+
+          <h3>Meddelande</h3>
+
+          <label>Ämne</label><br>
+          <input type="text" name="ämne2" id="ämne2" placeholder="Ämne">
+
+          <br>
+
+          <label>Meddelande</label>Meddelande<br>
+          <textarea
+            name="message2"
+            id="message2"
+            cols="40"
+            rows="10"
+            placeholder="Meddelande"
+          ></textarea>
+
+          <br>
+
+          <input type="checkbox" name="agree" id="agree">
+          <label
+            >Jag godkänner Robins påhittade
+            <a href="policy.html" target="_blank" id="policyText">Policy</a>.</label
+          >
+
+          <br>
+          <br>
+
+          <input type="submit" value="Skicka" name="Kontakt-Skicka" id="Kontakt-Skicka">
+        
+        </fieldset>
+      </form>
+    </main>
+
+    <footer>
+      <p>Designad av Robin Klasson</p>
+    </footer>
+  </body>
+</html>

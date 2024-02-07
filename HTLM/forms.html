@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" >
+    <script src="script.js" defer></script>
+    <title>Forms</title>
+</head>
+
+<body>
+    <header>
+    <h1>Formulär</h1>    
+    <div>
+        <h2>Meny</h2>
+        <nav>
+            <ul>
+                <li>
+                <a href="main.html"><strong>Huvudsida</strong></a>
+                </li>
+
+                <li>
+                    <a href="contact.html"><strong>Kontakt</strong></a>
+                </li>
+
+                <li>
+                    <a href="series.html"><strong>Serier</strong></a>
+                </li>
+
+                <li>
+                    <a href="forms.html" class="active">Formulär</a>
+                </li>
+
+                <li>
+                    <a href="buttons.html"><strong>Knappar</strong></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+    
+        <h1>Formulär</h1>
+    <p>
+       Här finns en mängd olika formulär.
+    </p>
+
+    <form>
+        <fieldset>
+            <legend>Kontakta oss</legend>
+            <h3>Skicka ett meddelande till oss</h3>
+
+            <label>Namn</label>lable>
+            <br>
+            <input type="text" name="firstName" placeholder="Förnamn">
+            <input type="text" name="lastName" placeholder="Efternamn">
+        
+
+            <br>
+
+       
+            <lable>Kontaktinformation</lable><br>
+            <input type="email" name="email" placeholder="Email">
+            <input type= "tel" name="phone" placeholder="Telefon">
+
+
+            <br>
+        
+            <lable>Meddelande</lable><br>
+            <textarea name="message" cols="40" rows="10" placeholder="Meddelande"></textarea>
+           
+            <br>
+           
+            <input type="submit" value="Skicka" name="Kontakt-Skicka" Id="Kontakt-Skicka">
+        </fieldset>
+    </form>
+    
+    <br>
+
+    <form>
+        <h3>Frågeformulär</h3>
+        <fieldset>
+            <legend>Frågor</legend>
+            <h3>Fråga 1</h3>
+            <p>Skulle du säga att du är bra på att ta raka beslut?</p>
+            <input type="radio" name="fråga1" id="1Ja?" value="Ja?">
+            <label for="Ja?">Definitivt ett eventuellt ja.</label>
+            <br>
+            <input type="radio" name="fråga1" id="1Nej?" value="Nej?">
+            <label for="Nej?">Det lutar förmodligen mot ett nej, eller?</label>
+            <br>
+            <input type="radio" name="fråga1" id="1Va?" value="Va?">
+            <label for="Nej?">Vänta, vad var frågan?</label>
+            <br>
+            <input type="radio" name="fråga1" id="1Pass" value="Pass">
+            <label for="Nej?">Pass!</label>
+            <br>
+            <input type="submit" value="Skicka" name="Fråga-Skicka" id="Fråga-Skicka">
+        </fieldset>
+    </form>
+
+    </main>
+</body>
+
+<footer>
+    <p>Designad av Robin Klasson</p>
+</footer>
+</html>

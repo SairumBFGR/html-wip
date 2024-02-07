@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" >
+    <script src="script.js" defer></script>
+    <script src="buttonGame.js" defer></script>
+    
+    <title>Home</title>
+  </head>
+
+  <body class="whiteBg">
+    <header>
+      <h1>Huvudsida</h1>
+      <div>
+        <h2>Meny</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="main.html" class="active"><strong>Huvudsida</strong></a>
+            </li>
+
+            <li>
+              <a href="contact.html"><strong>Kontakt</strong></a>
+            </li>
+
+            <li>
+              <a href="series.html"><strong>Serier</strong></a>
+            </li>
+
+            <li>
+              <a href="forms.html"><strong>Formulär</strong></a>
+            </li>
+
+            <li>
+              <a href="buttons.html">Knappar</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <h2>Knappar</h2>
+        <p>Här är lite knappar att leka med</p>
+
+        <div id="colorChange">
+          <button id="whiteButton">Vit</button>
+          <button id="redButton">Röd</button>
+          <button id="yellowButton">Gul</button>
+          <button id="blueButton">Blå</button>  
+        </div>
+        
+        <br>
+
+        <div class="flexCenter">
+          <button id="robinButton">Surprise Haj</button>
+        </div>
+
+        <img src="Images/RobinRaft.png" id="Haj" alt="haj" width="300" style="display: none;" >
+        
+        <h2>Knapp-spel</h2>
+
+        <p>Mål: Få alla knappar gröna.</p>
+        <div id="boxGame">
+          <div>
+            <button id="1"  style="background-color: green">G</button>
+            <button id="2"  style="background-color: green">G</button>
+            <button id="3"  style="background-color: red">R</button>
+            <button id="4"  style="background-color: green">G</button>
+            <button id="5"  style="background-color: green">G</button>
+          </div>
+            
+          <div>
+            <button id="6"  style="background-color: green">G</button>
+            <button id="7"  style="background-color: red">R</button>
+            <button id="8"  style="background-color: red">R</button>
+            <button id="9"  style="background-color: red">R</button>
+            <button id="10"  style="background-color: green">G</button>
+          </div>
+            
+          <div>
+            <button id="11"  style="background-color: red">R</button>
+            <button id="12"  style="background-color: red">R</button>
+            <button id="13"  style="background-color: red">R</button>
+            <button id="14"  style="background-color: red">R</button>
+            <button id="15"  style="background-color: red">R</button>
+          </div>
+            
+          <div>
+            <button id="16"  style="background-color: green">G</button>
+            <button id="17"  style="background-color: red">R</button>
+            <button id="18"  style="background-color: red">R</button>
+            <button id="19"  style="background-color: red">R</button>
+            <button id="20"  style="background-color: green">G</button>
+          </div>
+            
+          <div>
+            <button id="21"  style="background-color: green">G</button>
+            <button id="22"  style="background-color: green">G</button>
+            <button id="23"  style="background-color: red">R</button>
+            <button id="24"  style="background-color: green">G</button>
+            <button id="25"  style="background-color: green">G</button>
+          </div>
+          
+        </div>
+    <button id="reset">Reset</button>
+    </main>
+
+    <footer>
+      <p>Designad av Robin Klasson</p>
+    </footer>
+  </body>
+</html>

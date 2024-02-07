@@ -1,0 +1,99 @@
+fieldset {
+  background-color: #7069b420;
+}
+
+body {
+  background-color: rgb(231, 213, 230);
+}
+header h1{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.whiteBg {
+  background-color: white;
+}
+
+input[type="submit"] {
+  background-color: #ff69b450;
+  border-radius: 10%;
+}
+
+legend {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+}
+
+nav {
+  padding-right: 35px;
+  width: fit-content;
+  background-color: aquamarine;
+  border: 2px solid;
+}
+
+.active {
+  color: crimson;
+}
+
+footer {
+  border:purple solid;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 30px;
+}
+
+#colorChange {
+  position: relative;
+  right: 30px;
+  width: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flexCenter {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#boxGame {
+  margin: 30px;
+}
+
+#boxGame div {
+  display: flex;
+  align-items: center;
+
+}
+#boxGame div button{
+  width: 25px;
+  margin: 1px;
+}
+
+/* CSS för små skärmar */
+@media screen and (max-width: 600px) {
+  #colorChange {
+    position: relative;
+    right: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #Haj {
+    width: 200px;
+  }
+
+  .flexCenter {
+    width: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+}
