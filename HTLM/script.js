@@ -1,69 +1,72 @@
-const whiteButton = document.getElementById("whiteButton");
-const redButton = document.getElementById("redButton");
-const yellowButton = document.getElementById("yellowButton");
-const blueButton = document.getElementById("blueButton");
-const robinButton = document.getElementById("robinButton");
+"use strict"
 
-whiteButton.addEventListener("click", whiteClick);
-redButton.addEventListener("click", redClick);
-yellowButton.addEventListener("click", yellowClick);
-blueButton.addEventListener("click", blueClick);
-robinButton.addEventListener("click", robinClick);
+const navMenu = document.getElementById("mainMenu");            // Gör menyn till ett objektför att kunna dölja och visa den
+const hajImg = document.getElementById("Haj");                  // Gör Haj-bilden till ett objektför att kunna dölja och visa den
+const nameForm = document.getElementById("nameForm");           // Gör Namn-formuläret till ett objektför att kunna använda informationen
+const nameInput = document.getElementById("nameInput");         // Gör inmatat namn till ett objekt
+const greeting = document.getElementById("greeting");           // Gör hälsningsfrasen till ett objekt
+const visitors = document.getElementById("visitors");           // Gör listan över besökare till ett objekt
 
-function whiteClick() {
-    document.body.style.backgroundColor= "white";
-}
+const nameArray = [];                                           // En lista för namn
 
-function redClick() {
-    if(document.body.style.backgroundColor== "yellow")
-    {
-        document.body.style.backgroundColor= "orange";    
-    }
-    else if(document.body.style.backgroundColor== "blue")
-    {
-        document.body.style.backgroundColor= "purple";    
-    }
-    else
-    {
-        document.body.style.backgroundColor= "red";    
-    }
-}
+nameForm.addEventListener("submit", submitFunction );           // Aktiverar submit-funktionen när formulätet skickas.
 
-function yellowClick() {
-    if(document.body.style.backgroundColor== "red")
-    {
-        document.body.style.backgroundColor= "orange";    
-    }
-    else if(document.body.style.backgroundColor== "blue")
-    {
-        document.body.style.backgroundColor= "green";    
-    }
-    else
-    {
-        document.body.style.backgroundColor= "yellow";    
+function submitFunction(event) {                                // Submit-funktionen som hanterarinformationen                      
+    event.preventDefault();
+    if(nameInput.value.length > 0 ) {
+
+        const listElemment = document.createElement("li");      // Ett listelement vi kan skapa
+        listElemment.innerText = nameInput.value;               // Fer listelementet ett värde
+
+        visitors.appendChild(listElemment)
+
+        nameArray.push(nameInput.value);
+        console.log(nameArray);
+
+        greeting.innerText = nameArray.length == 1 
+        ? "Hej " + nameInput.value
+        : "Hej " + nameInput.value + ". Gästen innan dig var " + nameArray.at(-2);
     }
 }
-
-function blueClick() {
-    if(document.body.style.backgroundColor== "red")
-    {
-        document.body.style.backgroundColor= "purple";    
-    }
-    else if(document.body.style.backgroundColor== "yellow")
-    {
-        document.body.style.backgroundColor= "green";    
-    }
-    else
-    {
-        document.body.style.backgroundColor= "blue";    
-    }
-}
-
-
-function robinClick() {
-    const img = document.getElementById("Haj");
-
-    img.style.display = img.style.display == "none" ? "" : "none";
-    }
     
+function colorWhite() {                                         //Ändrar bakgrunsfärg till vit
+    document.body.style.backgroundColor = "white"
+}
 
+function colorRed() {                                           //Ändrar bakgrunsfärg till röd beroende på färg
+    if(document.body.style.backgroundColor == "yellow")
+        document.body.style.backgroundColor = "orange";
+    else
+        if(document.body.style.backgroundColor == "blue")
+            document.body.style.backgroundColor = "purple";
+    else
+        document.body.style.backgroundColor = "red";
+}
+
+function colorYellow() {                                        //Ändrar bakgrunsfärg till gul beroende på färg
+    if(document.body.style.backgroundColor == "red")
+    document.body.style.backgroundColor = "orange";
+else
+    if(document.body.style.backgroundColor == "blue")
+        document.body.style.backgroundColor = "green";
+else
+    document.body.style.backgroundColor = "yellow";
+}
+
+function colorBlue() {                                          //Ändrar bakgrunsfärg till blå beroende på färg
+    if(document.body.style.backgroundColor == "red")
+    document.body.style.backgroundColor = "purple";
+else
+    if(document.body.style.backgroundColor == "yellow")
+        document.body.style.backgroundColor = "green";
+else
+    document.body.style.backgroundColor = "blue";
+}
+
+function menuToggle() {                                         //Visar eller döljer meny
+    navMenu.classList.toggle("hide");
+}
+
+function hajToggle() {                                          //Visar eller döljer Haj-bilden
+    hajImg.classList.toggle("hide");
+}

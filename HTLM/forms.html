@@ -14,7 +14,8 @@
     <div>
         <h2>Meny</h2>
         <nav>
-            <ul>
+            <button id="menuButton" style="margin-left: 42px;" onclick="menuToggle()">Menu</button>
+            <ul id="mainMenu">
                 <li>
                 <a href="main.html"><strong>Huvudsida</strong></a>
                 </li>
@@ -50,7 +51,7 @@
             <legend>Kontakta oss</legend>
             <h3>Skicka ett meddelande till oss</h3>
 
-            <label>Namn</label>lable>
+            <label>Namn</label>
             <br>
             <input type="text" name="firstName" placeholder="Förnamn">
             <input type="text" name="lastName" placeholder="Efternamn">
@@ -97,7 +98,34 @@
             <br>
             <input type="submit" value="Skicka" name="Fråga-Skicka" id="Fråga-Skicka">
         </fieldset>
-    </form>
+     </form>
+
+     <br>
+     
+    <fieldset>
+        <legend>Namninmatning</legend>
+        <form id="nameForm">
+            <p>Ange ditt namn.</p>
+            <input type="text" id="nameInput" placeholder="Namn">
+        
+            <input type="submit" onclick="nameInp" value="Skicka"></button> 
+        </form>
+      
+        
+        <p id="greeting"></p>
+        
+        <br>
+
+        <p>Besökare:</p>
+
+        <br>
+
+        <ul id="visitors"></ul>
+    </fieldset>
+    
+    <br>
+
+        
 
     </main>
 </body>

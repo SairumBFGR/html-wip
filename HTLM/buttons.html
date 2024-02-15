@@ -12,13 +12,14 @@
 
   <body class="whiteBg">
     <header>
-      <h1>Huvudsida</h1>
+      <h1>Knappar</h1>
       <div>
         <h2>Meny</h2>
         <nav>
-          <ul>
+          <button id="menuButton" style="margin-left: 42px;" onclick="menuToggle()">Menu</button>
+          <ul id="mainMenu">
             <li>
-              <a href="main.html" class="active"><strong>Huvudsida</strong></a>
+              <a href="main.html"><strong>Huvudsida</strong></a>
             </li>
 
             <li>
@@ -34,77 +35,79 @@
             </li>
 
             <li>
-              <a href="buttons.html">Knappar</a>
+              <a href="buttons.html" class="active">Knappar</a>
             </li>
           </ul>
+      
         </nav>
       </div>
     </header>
     <main>
         <h2>Knappar</h2>
-        <p>Här är lite knappar att leka med</p>
+        <p>Här är lite knappar att leka med.</p>
 
         <div id="colorChange">
-          <button id="whiteButton">Vit</button>
-          <button id="redButton">Röd</button>
-          <button id="yellowButton">Gul</button>
-          <button id="blueButton">Blå</button>  
+          <button id="whiteButton" onclick="colorWhite()">Vit</button>
+          <button id="redButton" onclick="colorRed()">Röd</button>
+          <button id="yellowButton"onclick="colorYellow()">Gul</button>
+          <button id="blueButton" onclick="colorBlue()">Blå</button>  
         </div>
         
         <br>
 
         <div class="flexCenter">
-          <button id="robinButton">Surprise Haj</button>
+          <button id="hajButton" onclick="hajToggle()">Surprise Haj</button>
         </div>
 
-        <img src="Images/RobinRaft.png" id="Haj" alt="haj" width="300" style="display: none;" >
+        <img src="Images/RobinRaft.png" id="Haj" alt="haj" width="300" class="hide">
         
         <h2>Knapp-spel</h2>
 
         <p>Mål: Få alla knappar gröna.</p>
         <div id="boxGame">
           <div>
-            <button id="1"  style="background-color: green">G</button>
-            <button id="2"  style="background-color: green">G</button>
-            <button id="3"  style="background-color: red">R</button>
-            <button id="4"  style="background-color: green">G</button>
-            <button id="5"  style="background-color: green">G</button>
+            <button id="1" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="2" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="3" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="4" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="5" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
           </div>
             
           <div>
-            <button id="6"  style="background-color: green">G</button>
-            <button id="7"  style="background-color: red">R</button>
-            <button id="8"  style="background-color: red">R</button>
-            <button id="9"  style="background-color: red">R</button>
-            <button id="10"  style="background-color: green">G</button>
+            <button id="6" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="7" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="8" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="9" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="10" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
           </div>
             
           <div>
-            <button id="11"  style="background-color: red">R</button>
-            <button id="12"  style="background-color: red">R</button>
-            <button id="13"  style="background-color: red">R</button>
-            <button id="14"  style="background-color: red">R</button>
-            <button id="15"  style="background-color: red">R</button>
+            <button id="11" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="12" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="13" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="14" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="15" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
           </div>
             
           <div>
-            <button id="16"  style="background-color: green">G</button>
-            <button id="17"  style="background-color: red">R</button>
-            <button id="18"  style="background-color: red">R</button>
-            <button id="19"  style="background-color: red">R</button>
-            <button id="20"  style="background-color: green">G</button>
+            <button id="16" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="17" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="18" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="19" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="20" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
           </div>
             
           <div>
-            <button id="21"  style="background-color: green">G</button>
-            <button id="22"  style="background-color: green">G</button>
-            <button id="23"  style="background-color: red">R</button>
-            <button id="24"  style="background-color: green">G</button>
-            <button id="25"  style="background-color: green">G</button>
+            <button id="21" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="22" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="23" class="gameButton redButton" style="background-color: red" onclick="buttonClick(event)">R</button>
+            <button id="24" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
+            <button id="25" class="gameButton greenButton" style="background-color: green" onclick="buttonClick(event)">G</button>
           </div>
           
         </div>
-    <button id="reset">Reset</button>
+    <button id="reset" onclick="resetGame()">Reset</button>
+    <label id = "win" style="margin-left: 10px;"></label>
     </main>
 
     <footer>

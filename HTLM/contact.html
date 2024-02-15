@@ -13,7 +13,8 @@
       <div>
         <h2>Meny</h2>
         <nav>
-          <ul>
+          <button id="menuButton" style="margin-left: 42px;" onclick="menuToggle()">Menu</button>
+          <ul id="mainMenu">
             <li>
               <a href="main.html"><strong>Huvudsida</strong></a>
             </li>
@@ -83,7 +84,7 @@
           <br>
 
           <input type="checkbox" name="agree" id="agree">
-          <label
+          <label for="agree"
             >Jag godkänner Robins påhittade
             <a href="policy.html" target="_blank" id="policyText">Policy</a>.</label
           >
